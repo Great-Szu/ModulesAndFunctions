@@ -24,6 +24,8 @@ def encircled_square(length: int) -> None:
     turtle.right(135)
     turtle.circle(radius)
     turtle.left(135)
+    print(f'Inside function, namespace is: {dir()}')
+    print(f'Locals: {locals()}')
 
 
 # encircled_square(300)
@@ -34,3 +36,6 @@ def encircled_square(length: int) -> None:
 # turtle.done()
 
 print(dir())
+g = globals()
+print(g['square'])
+print(dir(__builtins__))
